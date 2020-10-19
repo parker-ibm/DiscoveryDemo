@@ -85,6 +85,24 @@ function onClick(element) {
 }
 
 
+
+
+// Watson Assistant
+  window.watsonAssistantChatOptions = {
+      integrationID: "017a7032-a8c6-48c8-bff9-88bb7fe22738", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "d257eeff-364a-4b6f-8407-7fbe3e60a0be", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+
+
+
+
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 
